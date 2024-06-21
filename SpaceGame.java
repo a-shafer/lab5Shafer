@@ -86,13 +86,13 @@ public class SpaceGame extends JFrame implements KeyListener {
         };
         // Loaads the ships and the blaster animation image as well as all sounds and handles the sounds/errors
         try {
-            shipImage = ImageIO.read(new File("C:\\Users\\shafe\\IdeaProjects\\lab5Shafer\\out\\Ship.png"));
-            blaster = ImageIO.read(new File("C:\\Users\\shafe\\IdeaProjects\\lab5Shafer\\out\\blaster.png"));
-            alienShip = ImageIO.read(new File("C:\\Users\\shafe\\IdeaProjects\\lab5Shafer\\out\\alien.png"));
-            powerUPPng = ImageIO.read(new File("C:\\Users\\shafe\\IdeaProjects\\lab5Shafer\\out\\HelthPowerUp.png"));
-            AudioInputStream audioInputStreamBlaster = AudioSystem.getAudioInputStream((new File("C:\\Users\\shafe\\IdeaProjects\\lab5Shafer\\out\\blaster.wav").getAbsoluteFile()));
-            AudioInputStream audioInputStreamBoom = AudioSystem.getAudioInputStream((new File("C:\\Users\\shafe\\IdeaProjects\\lab5Shafer\\out\\deltarune-explosion.wav").getAbsoluteFile()));
-            AudioInputStream audioInputStreamGameOver = AudioSystem.getAudioInputStream((new File("C:\\Users\\shafe\\IdeaProjects\\lab5Shafer\\out\\emotional-damage-meme.wav").getAbsoluteFile()));
+            shipImage = ImageIO.read(new File("Ship.png"));
+            blaster = ImageIO.read(new File("blaster.png"));
+            alienShip = ImageIO.read(new File("alien.png"));
+            powerUPPng = ImageIO.read(new File("HelthPowerUp.png"));
+            AudioInputStream audioInputStreamBlaster = AudioSystem.getAudioInputStream((new File("blaster.wav").getAbsoluteFile()));
+            AudioInputStream audioInputStreamBoom = AudioSystem.getAudioInputStream((new File("deltarune-explosion.wav").getAbsoluteFile()));
+            AudioInputStream audioInputStreamGameOver = AudioSystem.getAudioInputStream((new File("emotional-damage-meme.wav").getAbsoluteFile()));
             blasterSound = AudioSystem.getClip();
             shipBoom = AudioSystem.getClip();
             gameOverSound = AudioSystem.getClip();
@@ -114,7 +114,7 @@ public class SpaceGame extends JFrame implements KeyListener {
         // all the labels at top of screen
         scoreLabel = new JLabel("Score: 0");
         scoreLabel.setForeground(Color.BLUE);
-        scoreLabel.setBounds(10, 10, 100, 20);
+        scoreLabel.setBounds(100, 10, 100, 20);
         gamePanel.add(scoreLabel);
         healthLable = new JLabel("Health: 50");
         healthLable.setForeground(Color.RED);
